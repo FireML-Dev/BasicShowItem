@@ -10,6 +10,9 @@ public class ChatListener implements Listener {
 
     @EventHandler
     public void onChat(AsyncChatEvent event) {
+        if (!event.getPlayer().hasPermission("simpleshowitem.use")) {
+            return;
+        }
         ItemStack item = event.getPlayer().getInventory().getItemInMainHand();
         if (item.getType().isEmpty()) {
             return;
