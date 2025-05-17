@@ -1,6 +1,0 @@
-name: SimpleShowItem
-version: '1.0'
-main: uk.firedev.simpleshowitem.SimpleShowItem
-api-version: '1.21'
-authors: [ FireML ]
-description: Simple show item plugin

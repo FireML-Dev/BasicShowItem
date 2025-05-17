@@ -1,5 +1,8 @@
+import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
+
 plugins {
     `java-library`
+    id("de.eldoria.plugin-yml.bukkit") version "0.7.1"
 }
 
 repositories {
@@ -14,8 +17,24 @@ dependencies {
 
 group = "uk.firedev"
 version = "1.0"
-description = "Simple show item plugin"
+description = "Show your held item in chat"
 java.sourceCompatibility = JavaVersion.VERSION_21
+
+bukkit {
+    name = rootProject.name
+    version = project.version.toString()
+    main = "uk.firedev.simpleshowitem.SimpleShowItem"
+    apiVersion = "1.21"
+    author = "FireML"
+    description = project.description.toString()
+
+    permissions {
+        register("simpleshowitem.use") {
+            description = "Allows the player to show their held item in chat"
+            default = BukkitPluginDescription.Permission.Default.TRUE
+        }
+    }
+}
 
 tasks {
     jar {
