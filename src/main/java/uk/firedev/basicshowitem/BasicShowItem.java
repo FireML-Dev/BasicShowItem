@@ -1,9 +1,9 @@
-package uk.firedev.simpleshowitem;
+package uk.firedev.basicshowitem;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class SimpleShowItem extends JavaPlugin {
+public final class BasicShowItem extends JavaPlugin {
 
     @Override
     public void onEnable() {

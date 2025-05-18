@@ -1,4 +1,4 @@
-package uk.firedev.simpleshowitem;
+package uk.firedev.basicshowitem;
 
 import io.papermc.paper.event.player.AsyncChatEvent;
 import net.kyori.adventure.text.Component;
@@ -10,7 +10,7 @@ public class ChatListener implements Listener {
 
     @EventHandler
     public void onChat(AsyncChatEvent event) {
-        if (!event.getPlayer().hasPermission("simpleshowitem.use")) {
+        if (!event.getPlayer().hasPermission("basicshowitem.use")) {
             return;
         }
         ItemStack item = event.getPlayer().getInventory().getItemInMainHand();
