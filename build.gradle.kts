@@ -12,11 +12,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
 }
 
 group = "uk.firedev"
-version = "1.0"
+version = "1.0.1"
 description = "Show your held item in chat"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
@@ -24,7 +24,7 @@ bukkit {
     name = rootProject.name
     version = project.version.toString()
     main = "uk.firedev.basicshowitem.BasicShowItem"
-    apiVersion = "1.21"
+    apiVersion = "1.20"
     author = "FireML"
     description = project.description.toString()
 
