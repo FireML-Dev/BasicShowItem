@@ -3,6 +3,7 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 plugins {
     `java-library`
     id("de.eldoria.plugin-yml.bukkit") version "0.7.1"
+    id("com.gradleup.shadow") version "9.0.0"
 }
 
 repositories {
@@ -13,6 +14,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
+    implementation("org.bstats:bstats-bukkit:3.0.2")
 }
 
 group = "uk.firedev"
@@ -44,10 +46,19 @@ bukkit {
 }
 
 tasks {
-    jar {
+    build {
+        dependsOn(shadowJar)
+    }
+    shadowJar {
         archiveBaseName.set(project.name)
         archiveVersion.set(project.version.toString())
         archiveClassifier.set("")
+        minimize()
+
+        relocate("org.bstats", "uk.firedev.basicshowitem.libs.bstats")
+    }
+    jar {
+        enabled = false
     }
     withType<JavaCompile> {
         options.encoding = "UTF-8"
