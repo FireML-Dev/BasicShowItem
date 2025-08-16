@@ -14,9 +14,6 @@ public class ChatListener implements Listener {
             return;
         }
         ItemStack item = event.getPlayer().getInventory().getItemInMainHand();
-        if (item.getType().isEmpty()) {
-            return;
-        }
         Component hover = item.displayName();
         Component message = event.message()
             .replaceText(builder -> builder.matchLiteral("[i]").replacement(hover))
