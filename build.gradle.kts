@@ -34,6 +34,13 @@ bukkit {
             default = BukkitPluginDescription.Permission.Default.TRUE
         }
     }
+
+    commands {
+        register("basicshowitem") {
+            description = "Show your held item in chat"
+            aliases = listOf("showitem")
+        }
+    }
 }
 
 tasks {
