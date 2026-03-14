@@ -18,7 +18,7 @@ dependencies {
 }
 
 group = "uk.firedev"
-version = "1.0.2"
+version = "1.0.3"
 description = "Show your held item in chat"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
